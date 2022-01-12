@@ -1,13 +1,20 @@
+import "./Item.scss"
+
 function Item(props){
   const item = props.item;/*Recibimos los datos*/
+
+  const pointsStyle = {/*Ponemos estilos a points*/
+    color: "green",
+    fontSize: "20px"
+  }
     return(
       <>
         <span>
           <a href={item.url}>{item.title}</a>
         </span>
-        <span>{item.author}</span>
+        <span className="item-author">{item.author}</span>
         <span>{item.num_comments}</span>
-        <span>{item.points}</span>
+        <span style={pointsStyle}>{item.points}</span>
     </>  
   )
     
