@@ -17,22 +17,6 @@ const list = [
   }
 ];
 
-//Otra forma de hacerlo sin usar el map, poner nombre abajo y listo
-
-/*const items = [];
-for (const item of list){
-  items.push(
-    <li key={item.ObjectID}>
-      <span>
-        <a href={item.url}>{item.title}</a>
-      </span>
-      <span>{item.author}</span>
-      <span>{item.num_comments}</span>
-      <span>{item.points}</span>
-    </li>
-  )
-}*/
-
 function List() {
   return (
     <ul>
@@ -52,21 +36,24 @@ function List() {
   );
 }
 
-function App() {
-  const title = "React";
-  return (
-    <div className="App">
-      <h1>My Hacker Stories</h1>
+export default List;
 
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text"></input>
 
-      <hr />
 
-      <List />
 
-    </div>
-  );
-}
 
-export default App;
+//Otra forma de hacerlo sin usar el map, poner nombre abajo y listo
+
+/*const items = [];
+for (const item of list){
+  items.push(
+    <li key={item.ObjectID}>
+      <span>
+        <a href={item.url}>{item.title}</a>
+      </span>
+      <span>{item.author}</span>
+      <span>{item.num_comments}</span>
+      <span>{item.points}</span>
+    </li>
+  )
+}*/
