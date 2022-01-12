@@ -1,3 +1,5 @@
+import Item from "./Item";
+
 const list = [
   {
     title : 'React',
@@ -21,14 +23,9 @@ function List() {
   return (
     <ul>
       {list.map(function (item) {
-        return (
+        return (/*Le pasamos el objeto item al componente*/
           <li key={item.ObjectID}>
-            <span>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
+            <Item item={item}/>
           </li>
         );
       })}
