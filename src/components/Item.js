@@ -1,6 +1,6 @@
 import "./Item.scss"
 
-function Item(props){
+function Item(props){/*Item({ item })*//*Tambien puede ser asi*/
   const item = props.item;/*Recibimos los datos*/
 
   const pointsStyle = {/*Ponemos estilos a points*/
