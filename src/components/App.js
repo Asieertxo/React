@@ -1,21 +1,28 @@
+import {useState} from "react";
 import List from "./List";
 import Search from "./Search";
 
 
 function App() {
-  const title = "React";
+  
+  const [searchTerm, setSearchTerm] = useState("");
+
+
   return (
     <div className="App">
       <h1>My Hacker Stories</h1>
 
-      <Search />
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
 
       <hr />
 
-      <List />
+      <List searchTerm={searchTerm}/>
 
     </div>
   );
 }
 
 export default App;
+
+
+/*13-01-2022*/

@@ -1,10 +1,18 @@
-function Search(){
+export default function Search({searchTerm, setSearchTerm}){
+
+  function handleChange(event){
+    setSearchTerm(event.target.value);
+  }
+
   return(
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text"></input>
+      <input id="search" type="text" onChange={handleChange}/>
+
+      <p>
+        Searching for <strong>{searchTerm}</strong>.
+      </p>
     </>
   )
 }
 
-export default Search;

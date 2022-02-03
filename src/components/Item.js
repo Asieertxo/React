@@ -15,9 +15,8 @@ function Item(props){
         <span className="item-author">{item.author}</span>
         <span>{item.num_comments}</span>
         <span style={pointsStyle}>{item.points}</span>
-    </>  
-  )
-    
-}
+      </>  
+    )
+  }
 
 export default Item;

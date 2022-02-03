@@ -19,10 +19,10 @@ const list = [
   }
 ];
 
-function List() {
+function List({searchTerm}) {
   return (
     <ul>
-      {list.map(function (item) {
+      {list.filter(item => item.title.toLowerCase().includes(searchTerm)).map(function (item) {
         return (/*Le pasamos el objeto item al componente*/
           <li key={item.ObjectID}>
             <Item item={item}/>
